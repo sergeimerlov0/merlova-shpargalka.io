@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'greens';
+    font-display: swap;
+    src: url('../fonts/TTPollsScript-Regular.eot');
+    src: url('../fonts/TTPollsScript-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTPollsScript-Regular.woff2') format('woff2'),
+    url('../fonts/TTPollsScript-Regular.woff') format('woff'),
+    url('../fonts/TTPollsScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+
+
+@font-face {
+    font-family: 'greens';
+    font-display: swap;
+    src: url('../fonts/TTPollsScript-Thin.eot');
+    src: url('../fonts/TTPollsScript-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTPollsScript-Thin.woff2') format('woff2'),
+    url('../fonts/TTPollsScript-Thin.woff') format('woff'),
+    url('../fonts/TTPollsScript-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+    
+
+
+@font-face {
+    font-family: 'greens';
+    font-display: swap;
+    src: url('../fonts/TTPollsScript-Light.eot');
+    src: url('../fonts/TTPollsScript-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTPollsScript-Light.woff2') format('woff2'),
+    url('../fonts/TTPollsScript-Light.woff') format('woff'),
+    url('../fonts/TTPollsScript-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+    
+
+
+@font-face {
+    font-family: 'greens';
+    font-display: swap;
+    src: url('../fonts/TTPollsScript-Bold.eot');
+    src: url('../fonts/TTPollsScript-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTPollsScript-Bold.woff2') format('woff2'),
+    url('../fonts/TTPollsScript-Bold.woff') format('woff'),
+    url('../fonts/TTPollsScript-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+    
+
+
+@font-face {
+    font-family: 'greens';
+    font-display: swap;
+    src: url('../fonts/TTPollsScript-Black.eot');
+    src: url('../fonts/TTPollsScript-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTPollsScript-Black.woff2') format('woff2'),
+    url('../fonts/TTPollsScript-Black.woff') format('woff'),
+    url('../fonts/TTPollsScript-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+    
