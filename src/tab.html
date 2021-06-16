@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>git</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head block__head_one">
+                <div class="block__text">
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;простой таб</h1>
+                    <h3>
+                        window.addEventListener('DOMContentLoaded', () => { <br>
+                            <div class="h4">// прописываем дом чтобы страница не перезапускалась</div>
+                            &nbsp;&nbsp;&nbsp;const contans = document.querySelectorAll('. block__text'),<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabs = document.querySelectorAll('.block__tab'),<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabPerent = document.querySelector('.block__tabs');<br>
+                            <div class="h4">// задаем переменные каждого таба, родителя табов и контента</div>
+                        
+                            function removeTabContent() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contans.forEach(item => {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.style.display = 'none';<br>
+                                });<br>
+                                tabs.forEach(item => {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.classList.remove('block__tab_activ');<br>
+                                });<br>
+                            }<br>
+                            <br>
+                            function showTabContent(i = 0) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contans[i].style.display = 'block';<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabs[i].classList.add('block__tab_activ');<br>
+                        
+                            }
+                            <div class="h4">// прописываем две функции, первая отменяет весь контент и актывные табы, вторая показывет первый контент и первый таб из блока</div>
+                        
+                            removeTabContent();<br>
+                            showTabContent();
+                            <div class="h4">// вызываем обе функции</div><br>
+                        
+                            tabPerent.addEventListener('click', (event) => {
+                                <div class="h4">// вызываем обработчик события</div>
+                                &nbsp;&nbsp;&nbsp;const target = event.target;
+                                <div class="h4">// создаем переменную target , чтобы каждый раз не прописывать полностью event.target</div>
+                        
+                                if(target && target.classList.contains('block__tab')) {
+                                    <div class="h4">// проверяем действительно ли мы кликнули в таб</div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabs.forEach((item, i) => {
+                                        <div class="h4">// мы перебераем все табы, item - каждый таб, i - номер таба</div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(target == item) {
+                                            <div class="h4">// если target - который мы кликнули , будет совподать с элементом то --</div>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeTabContent();<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showTabContent(i);
+                                            <div class="h4">// -- мы будем вызывать эти две функции</div>
+                                        }<br>
+                                    });<br>
+                                }<br>
+                            });<br>
+                        });
+                    </h3>
+                </div>
+                <div class="block__line"></div>
+            </div>
+
+            <div class="next">
+                <a href="index.html"><div class="next_img next_img_one"></div><div class="next_img"></div><div class="next_img next_img_one"></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
