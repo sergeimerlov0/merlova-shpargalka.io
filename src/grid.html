@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cblock">
+        <div class="container">
+            <h1>grid</h1>
+            <p>grid - это двухмерная система компоновки блоков на основе сетки.</p>
+            <p>grid объявляется в контейнере <br> .grid-container<br>задается с помощью свойства <br> display: grid;<br>далее задаются кол-во колонок и столбцов, а так же их размеры<br> grid-tamplate-columns: 100px 100px 100px; <br> grid-tamplate-rows: 50px 50px 50px;<br>для сокращения кода можно записать в одну строчку<br>grid-tamplate: 50px 50px 50px / 100px 100pz 100px<br>потом задаем расстояние между блоками <br> columns-gap: 20px; <br> rows-gap: 20px<br>если расстояние одинаковое можно записать <br> gap: 20px;</p>
+            <p>fr - единица измерения , которая делит на равные части.</p>
+            <p>repeat() - для компактной записи повторяющихся столбщов и линеек.<br> пример: grid-tamplate-columns: repeat(3 (сколько раз будем повторять), fr  (что повторять));</p><br>
+            <p>в явных гридах (которые не поместились в сетку) то же задаются размеры<br><span>grid-auto-columns: 200px;</span></p>
+            <p>если объем текста меняется, для изменения размера блока используется (а так же при одоптации): <br><span>minmax()<br> repeat(3, minmax(200px, 300px (auto))</span></p>
+            <p>для заполнения элементами всей ширины контейнера используется: <br><span>auto-fit <br>grid-tamplate-columns: repeat(auto-fit,minmax(100px, 300px))</span></p>
+            <p>auto-fill - оставляет место под элеменыт.</p>
+            <p>grid-auto-flow - свойтво управляет поведение автоматически размещенных элементов <br><span>grid-auto-flow: colomn;</span></p>
+            <p>позиционирование треков делают с помощью свойств: <br><span>grid-colomn-start: 3; <br>grid-colomn-end: 5;<br>grid-row-start: 1; <br>grid-row-end: 3;</span><br>можно сократить: <br><span>grid-colomn: 3/5; <br>grid-row: 1/3;</span></p>
+        </div>
+    </div>
+    
+</body>
+</html>

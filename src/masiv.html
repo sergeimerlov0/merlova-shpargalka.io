@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container">
+            <div class="block__head">
+                <div class="block__text">
+                    <h2>Методы для работы с массивом.</h2>
+                    <p>.pop() - метод который удаляет последний элемент из массива.</p>
+                    <p>.push() - метод который добавляет элемент в конец массива, в скобках указывается что добавляем.</p>
+                    <P>.forEach() - метод испольется для перебора массива, его можно гибко настроить (задать функцию в скобках , которая будет срабатывать в каждом элементе массива.<br> пример:<br>
+                    arr.forEach(function(item, i , arr){
+                        console.log(`${i} : ${item} - ${arr}`);
+                    })<br>item - содержимое массива<br> i - номер массива<br> arr - массив</P>
+                    <p>.split() - метод который разбивает на массив строк путем разделением строки указанной подстракой.</p>
+                    <p>.join() - метод который объединяет все элементы массива в строку.</p>
+                    <p>.sort() - метод сортировки массива.<br>для сортировки чисес используется колбэк функция <br> function compareNun(a, b) {return a- b}<br>arr.sort(compareNum)</p>
+                    <p>Object.assign() - метод используется для копирования всех собственных перечисленных свойств из одного или более исходных объектов в целевой.</p>
+                    <P>... - оператор разварота используется для соединения нескольки массивов.</P>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
