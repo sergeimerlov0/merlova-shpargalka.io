@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>время даты</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head block__head_one">
+                <div class="block__text">
+                    <h2>скрипты и время их выполнения.</h2> 
+                    <p><span>setTimeout</span> - это функция которая позволяет сделать задержку перед запуском кода, выполняется один раз.</p>
+                    <br>
+                    <p><span>setInterval</span> - функция производит выполнение кода через указанный интервал времени.</p>
+                    
+                    <div class="h4">пример...</div>
+                    <p>const btn = document.querySelector('button');<br>
+                        &nbsp;&nbsp;&nbsp;let cub,<br>
+                        &nbsp;&nbsp;&nbsp;i = 0;<br>
+                        
+                        btn.addEventListener('click', () => {<br>
+                            &nbsp;&nbsp;&nbsp;cub = setInterval(set, 2000);<br>
+                        });<br>
+                        
+                        
+                        function set() {<br>
+                            &nbsp;&nbsp;&nbsp;if(i === 3) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(cub);
+                                <div class="h4">//команда для завершения интервала</div>
+                          }<br>
+                          &nbsp;&nbsp;&nbsp;console.log("text");<br>
+                          &nbsp;&nbsp;&nbsp;i++;<br>
+                        }</p>
+                        <div class="line"></div>
+                        <h2>работа с датами.</h2>
+                        <p><span>getFullYear()</span> - выводит год.</p>
+                        <p><span>getMonth()</span> - выводит месяц.</p>
+                        <p><span>getDate()</span> - выводит число.</p>
+                        <p><span>getDay()</span>  - номер дня недели.</p>
+                        <p><span>setHours(...)</span> - в скобки всталяем на сколько часов будем менять время.</p>
+                        <p><span>Date.porse()</span> - метод разбирает строковое представление даты и возвращает количество миллисекунд, прошедших с 1 января 1970 года</p>
+
+                </div>
+                <div class="block__line"></div>
+            </div>
+                
+
+            <div class="next">
+                <a href="index.html"><div class="next_img next_img_one"></div><div class="next_img"></div><div class="next_img next_img_one"></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
