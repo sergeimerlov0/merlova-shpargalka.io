@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>git</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head block__head_one">
+                <div class="block__text">
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;отправка данных на сервер</h1>
+                    <p>
+                        const forms = document.querySelector('form');<br>
+                        <div class="h4">//получаем форму или формы</div>
+                        const messange = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loading: 'загрузка',<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success: 'спасибо',<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure: 'что-то пошло не так...'<br>
+                        };<br>
+<br>
+                        postDate(forms); <br>
+                        function postDate(form) {<br>
+                            <div class="h4">// функция отвечающая за постинг данных</div>
+                            form.addEventListener('submit', (e) => {<br>
+                                <div class="h4">//submit используется для проверки (валидации) формы перед её отправкой</div>
+                                e.preventDefault();<br>
+                                <div class="h4">//отменить стандартное поведение браузера (перезагрузка страницы)</div>
+                                const statusMessage = document.createElement('div');<br>
+                                statusMessage.textContent = messange.loading;<br>
+                                form.append(statusMessage);<br>
+                                const request = new XMLHttpRequest();<br>
+                                <div class="h4">//Request из Fetch API является запросом ресурсов или данных.</div>
+                                request.open('POST', 'server.php');<br>
+
+                                request.setRequestHeader('Content-type', 'application/json');<br>
+                                const formData = new FormData(form);<br>
+                                const object = {}; <br>
+                                formData.forEach(function(value, key) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; object[key] = value;<br>
+                                });<br>
+                                const json = JSON.stringify(object);<br>
+                                <br>
+                                request.send(json);<br>
+                                <div class="h4">//отправляем данные</div>
+                                request.addEventListener('load', () => {<br>
+                                    <h4>//отслеживем конечную загрузку</h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;if(request.status === 200) {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(request.response);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;statusMessage.textContent = messange.success;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;statusMessage.textContent = messange.failure;<br>
+                                    }<br>
+                                });<br>
+                            });<br>
+                        }<br>
+                    </p>
+                    <h2>файл server php</h2>
+                    <P>
+                        <?php <br>
+                        $_POST = json_decode(file_get_contents("php://input"),true);<br>
+                        echo var_dump($_POST);
+                    </P>
+                    
+                </div>
+                <div class="block__line"></div>
+            </div>
+
+            <div class="next">
+                <a href="index.html"><div class="next_img next_img_one"></div><div class="next_img"></div><div class="next_img next_img_one"></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

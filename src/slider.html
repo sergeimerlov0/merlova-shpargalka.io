@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>slider</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head">
+                <div class="block__text">
+                    <h1>простой slider</h1>
+                    <p>
+                        div class="h4">Создаем структуру слайдера./div>
+                        div class="container"><br>
+                            div class="slider"><br>
+                                &nbsp;&nbsp;&nbsp;div class="slider-line"><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img src="icons/photo_1.png" alt="1"><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img src="icons/photo_2.png" alt="2"><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img src="icons/photo_3.png" alt="3"><br>
+                                    &nbsp;&nbsp;&nbsp;/div><br>
+                                    &nbsp;&nbsp;&nbsp;/div><br>
+                            button class="slider-next">next/button><br>
+                            button class="slider-prev">prev/button><br>
+                        /div><br>
+                    </p>
+                    <br>
+                    <p>
+                        <div class="h4">создаем стили.</div>
+                        .container {<br>
+                            &nbsp;&nbsp;&nbsp;position: relative;<br>
+                            &nbsp;&nbsp;&nbsp;max-width: 1200px;<br>
+                            &nbsp;&nbsp;&nbsp;margin: 30px auto;<br>
+                            &nbsp;&nbsp;&nbsp;background: #f1f1f1;<br>
+                            &nbsp;&nbsp;&nbsp;padding: 30px;<br>
+                        }<br>
+                        .slider {<br>
+                            
+                            &nbsp;&nbsp;&nbsp;width: 169px;<br>
+                            &nbsp;&nbsp;&nbsp;height: 169px;<br>
+                            &nbsp;&nbsp;&nbsp;border: 2px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;margin: 30px auto;<br>
+                            &nbsp;&nbsp;&nbsp;overflow: hidden;<br>
+                        }<br>
+                        .slider-line {<br>
+                            &nbsp;&nbsp;&nbsp;width: 1352px;<br>
+                            &nbsp;&nbsp;&nbsp;height: 169px;<br>
+                            &nbsp;&nbsp;&nbsp;background: orange;<br>
+                            &nbsp;&nbsp;&nbsp;display: flex;<br>
+                            &nbsp;&nbsp;&nbsp;position: relative;<br>
+                            &nbsp;&nbsp;&nbsp;left: 0;<br>
+                            &nbsp;&nbsp;&nbsp;transition: all ease 2s;<br>
+                        }<br>
+                        .slider-next {<br>
+                            &nbsp;&nbsp;&nbsp;position: absolute;<br>
+                            &nbsp;&nbsp;&nbsp;top: 139px;<br>
+                            &nbsp;&nbsp;&nbsp;left: 300px;<br>
+                        }<br>
+                        .slider-next:hover {<br>
+                            &nbsp;&nbsp;&nbsp;background: red;<br>
+                        }<br>
+                        .slider-prev {<br>
+                            &nbsp;&nbsp;&nbsp;position: absolute;<br>
+                            &nbsp;&nbsp;&nbsp;top: 139px;<br>
+                            &nbsp;&nbsp;&nbsp;right: 300px;<br>
+                        }<br>
+                        .slider-prev:hover {<br>
+                            &nbsp;&nbsp;&nbsp;background: blue;<br>
+                        }
+                    </p>
+                    <br>
+                    <div class="h4">прописываем скрипт.</div>
+
+                    let offset = 0; // смещение от левого края{<br>
+                    const sliderLine = document.querySelector('.slider-line');{<br>
+                    const sliderNext = document.querySelector('.slider-next');{<br>
+                    const sliderPrev = document.querySelector('.slider-prev');{<br>{<br>
+                    function showSlids(n) {<br>
+                        &nbsp;&nbsp;&nbsp;if(n>slideImg.length){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sliderIndex = 1;<br>
+                        }<br>
+                    
+                        &nbsp;&nbsp;&nbsp;if(n < 1) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderIndex = slideImg.length;<br>
+                            &nbsp;&nbsp;&nbsp;}
+                            &nbsp;&nbsp;&nbsp;slideImg.forEach(item => item.style.display = 'none');<br>
+                    
+                            &nbsp;&nbsp;&nbsp;slideImg[sliderIndex - 1].style.display = 'block';<br>
+                    }<br>
+                    <br>
+                    function pluseSlides(n) {<br>
+                        &nbsp;&nbsp;&nbsp;showSlids(sliderIndex += n);<br>
+                    }<br>
+                    <br>
+                    prev.addEventListener('click', () => {<br>
+                        &nbsp;&nbsp;&nbsp;pluseSlides(-1);<br>
+                    });<br>
+                    <br>
+                    next.addEventListener('click', () => {<br>
+                        &nbsp;&nbsp;&nbsp;pluseSlides(1);<br>
+                    }); */
+            
+                </div>
+                <div class="block__line"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

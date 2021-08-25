@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>timer</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head block__head_one">
+                <div class="block__text">
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer</h1> 
+                    <p>
+                        const deadline = '2021-07-14';<br>
+
+
+    function getTimeRemeineng(endtime) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t = Date.parse(endtime) - Date.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parse(new Date()),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days = Math.floor(t / (1000 * 60 *60 * 24)),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours = Math.floor((t/(1000*60*60)%24)),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes = Math.floor((t / 1000 / 60) % 60),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds = Math.floor((t / 1000) % 60);<br>
+              <br>
+        return {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'total': t,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'days': days,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'hours': hours,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'minutes': minutes,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'seconds': seconds<br>
+        };<br>
+    }<br>
+<br>
+    function getZero(num) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num >= 0 && num < 10) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return `0${num}`;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return num;<br>
+        }<br>
+    }<br>
+<br>
+    function setClock(selector, endtime) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const timer = document.querySelector(selector),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days = timer.querySelector('#days'),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours = timer.querySelector('#hours'),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes = timer.querySelector('#minutes'),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second = timer.querySelector('#seconds'),<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeInterval = setInterval(updateClock, 1000);<br>
+<br>
+            updateClock();<br>
+<br>
+        function updateClock() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t = getTimeRemeineng(endtime);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days.innerHTML = getZero(t.days);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours.innerHTML = getZero(t.hours);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes.innerHTML = getZero(t.minutes);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second.innerHTML = getZero(t.seconds);<br>
+<br>
+            if(t.total <= 0) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(timeInterval);<br>
+            }<br>
+        }<br>
+    }<br>
+<br>
+    setClock('.timer', deadline);<br>
+});<br>
+                    </p>
+                    
+                </div>
+                <div class="block__line"></div>
+            </div>
+                
+
+            <div class="next">
+                <a href="index.html"><div class="next_img next_img_one"></div><div class="next_img"></div><div class="next_img next_img_one"></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

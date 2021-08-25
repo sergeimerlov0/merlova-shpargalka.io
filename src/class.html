@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/stayl.min.css">
+    <title>git</title>
+</head>
+<body>
+
+    <div class="block">
+        <div class="container cont_1">
+            <div class="block__head block__head_one">
+                <div class="block__text">
+                    <h1>class (ES6)</h1>
+                    <p>
+                        class constructorDiv {<br>
+                            <div class="h4">//забается имя классу</div>
+                            &nbsp;&nbsp;&nbsp;constructor(subtitle, text, parentSelector) {<br>
+                                <div class="h4">//создается конструктор</div>
+                                &nbsp;&nbsp;&nbsp;this.subtitle = subtitle;<br>
+                                &nbsp;&nbsp;&nbsp;this.text = text;<br>
+                                &nbsp;&nbsp;&nbsp;this.parent = document.querySelector<br>(parentSelector);<br>
+                            }<br>
+                            render() {<br>
+                                <div class="h4">//делается верстка</div>
+                                &nbsp;&nbsp;&nbsp;const element = document.createElement('div');<br>
+                                &nbsp;&nbsp;&nbsp;element.innerHTML = `<br>
+                                div class="box1_title"><br>
+                                &nbsp;&nbsp;&nbsp;div class="box1_subtitle">${this.subtitle}/div><br>
+                                &nbsp;&nbsp;&nbsp;div class="box1_text">${this.text}/div>
+                                /div><br>
+                                    `;<br>
+                                    &nbsp;&nbsp;&nbsp;this.parent.append(element);<br>
+                            }<br>
+                        
+                        }<br>
+                        <br>
+                        new constructorDiv(<br>
+                        <div class="h4">//задаются параметры аргументам</div>
+                        &nbsp;&nbsp;&nbsp;"polnay hren",<br>
+                        &nbsp;&nbsp;&nbsp;'это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством! ',<br>
+                        &nbsp;&nbsp;&nbsp;".box1"<br>
+                        ).render();<br>
+                        
+                    </p>
+                </div>
+                <div class="block__line"></div>
+            </div>
+
+            <div class="next">
+                <a href="index.html"><div class="next_img next_img_one"></div><div class="next_img"></div><div class="next_img next_img_one"></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
